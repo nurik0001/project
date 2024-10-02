@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Calculate">
+        <div class="qatar">
+        <Label>num1</Label>
+        <input type="number" id="a">
+         <Label>num2</Label>
+        <input type="number" id="b">
+
+          <div class="btn">
+           <button id="btnQos">+</button> 
+           <button id="btnAll">-</button> 
+           <button id="btnKobeyt">*</button> 
+           <button id="btnBol">/</button>
+          </div>
+         <br>
+         <h2 id="demo qosu"></h2>
+      
+        </div>
+   
+         <style>
+        .Calculate{
+            display: flex; 
+            list-style-type: none; 
+            padding: 0;
+        }
+        .btn{
+            text-align: center;
+            margin: 0;
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+       button{
+           margin: 0;
+           padding: 10px 50px;
+       }
+        </style>
+        
+   </style>
+
+
+
+
+
+    
+    <script>
+
+           
+    
+
+
+       var a = document.getElementById('a');
+       var b= document.getElementById('b');
+       var btn = document.getElementById('btnQos') ;
+       var Qosu= function(){
+          sum = parseInt(a.value) + parseInt(b.value);
+           document.getElementById('demo qosu').innerHTML ="Jauaby=" + sum;
+           
+       }
+       btn.addEventListener("click",Qosu);
+
+       var btn = document.getElementById('btnAll') ;
+       var Allu= function(){
+          sum = parseInt(a.value) - parseInt(b.value);
+           document.getElementById('demo qosu').innerHTML ="Jauaby=" + sum;
+           
+       }
+       btn.addEventListener("click",Allu);
+
+       var btn = document.getElementById('btnKobeyt') ;
+       var Kobeitu= function(){
+          sum = parseInt(a.value) * parseInt(b.value);
+           document.getElementById('demo qosu').innerHTML = "Jauaby=" + sum;
+           
+       }
+       btn.addEventListener("click",Kobeitu);
+
+       var btn = document.getElementById('btnBol') ;
+       var Bolu= function(){
+          sum = parseInt(a.value) / parseInt(b.value);
+           document.getElementById('demo qosu').innerHTML ="Jauaby=" + sum;
+           
+       }
+       btn.addEventListener("click",Bolu);
+
+
+
+       const user = "Aibek";
+       alert(`hello ` + `${user}`);
+
+      
+
+         
+    
+    
+    </script>
+    
+    
+    
+</body>
+</html>

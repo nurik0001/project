@@ -13,7 +13,7 @@
          <Label>num2</Label>
         <input type="number" id="b">
 
-          <div class="btn">
+          <div id="btn1">
            <button id="btnQos">+</button> 
            <button id="btnAll">-</button> 
            <button id="btnKobeyt">*</button> 
@@ -21,7 +21,7 @@
           </div>
          <br>
          <h2 id="demo qosu"></h2>
-         <p>hello world</p>
+         
 
         
       
@@ -55,14 +55,11 @@
     
     <script>
 
-           
     
-
-
-       var a = document.getElementById('a');
-       var b= document.getElementById('b');
-       var btn = document.getElementById('btnQos') ;
-       var Qosu= function(){
+    var a = document.getElementById('a');
+    var b= document.getElementById('b');
+    var btn = document.getElementById('btnQos') ;
+     var Qosu= function(){
           sum = parseInt(a.value) + parseInt(b.value);
            document.getElementById('demo qosu').innerHTML ="Jauaby=" + sum;
            
@@ -91,12 +88,8 @@
            document.getElementById('demo qosu').innerHTML ="Jauaby=" + sum;
            
        }
-       btn.addEventListener("click",Bolu);
+       
 
-
-
-       const user = "Aibek";
-       alert(`hello ` + `${user}`);
 
       
 

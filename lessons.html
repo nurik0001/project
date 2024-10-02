@@ -1,0 +1,228 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+
+          .demo{
+              display: inline-block;
+              margin-left: 54px;
+              font-weight: bold;
+          }
+            
+            p{
+                display: inline-block;
+                margin-left: 54px;
+                font-weight: bold;
+            
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="task1">
+         <p>a</p>
+         <input type="number" id="task1" placeholder="Сан жазу">
+         <button id="btn1">Дана сторона квадрата a. Найти его периметр P = 4·a</button>
+         <div class="demo"><div id="demo1"></div></div>
+        </div>
+
+
+        <div class="task2">
+            <p>a</p>
+            <input type="number" id="task2" placeholder="Сан жазу">
+            <button id="btn2">Дана сторона квадрата a. Найти его площадь S = a^2 </button>
+            <div class="demo"><div id="demo2"></div></div>
+        </div>
+
+        <div class="task3">
+            <p>a</p>
+            <input type="number" id="task3" placeholder="Сан жазу">
+            <p>b</p>
+            <input type="number" id="task3b" placeholder="Сан жазу">
+            <button id="btn3">Даны стороны прямоугольника a и b. Найти его площадь S = a·b</button>
+            <button id="btn3p">Периметр P = 2·(a + b).</button> 
+            <div class="demo"><div id="demo3"></div></div>
+        </div>
+        <div class="task4">
+           <p>a</p>
+           <input type="number" id="task4" placeholder="Сан жазу">
+           <button id="btn4">Дана длина ребра куба a. Найти объем куба V = a^3 </button>
+           <button id="btn4p">площадь его поверхности S = 6·a^2</button> 
+           <div class="demo"><div id="demo4"></div></div>
+        </div>
+        <!-- Task5 oryn auskan task3 -->
+       <div class="task5">
+         <p>d</p>
+         <input type="number" id="task5" placeholder="Сан жазу">
+         <button id="btn5">Дан диаметр окружности d. Найти ее длину L = π·d. В качестве значения π использовать 3.14 </button>
+         <div class="demo"><div id="demo5"></div></div>
+        </div>
+ 
+        <div class="task6"></div>
+            <p>a</p>
+            <input type="number" id="task6" placeholder="Сан жазу">
+            <p>b</p>
+            <input type="number" id="task6b" placeholder="Сан жазу">
+            <p>c</p>
+            <input type="number" id="task6c" placeholder="Сан жазу">
+            <button id="btn6">Даны длины ребер a, b, c прямоугольного параллелепипеда. Найти его объем V = a·b·c </button>
+            <button id="btn6p">площадь поверхности S = 2·(a·b + b·c + a·c)</button> 
+            <div class="demo"><div id="demo6"></div></div>
+        </div>
+
+       
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+        // task1     
+        var btn = document.getElementById('btn1');
+        var pirimetr1 = function() {
+            var num1 = document.getElementById('task1').value; 
+            var result = parseInt(num1) * 4; 
+            document.getElementById('demo1').innerHTML = result; 
+        }
+        btn.addEventListener('click', pirimetr1);
+        // task2
+        var btn = document.getElementById('btn2');
+        var task2area = function() {
+            var num1Task2 = document.getElementById('task2').value; 
+            var result = parseInt(num1Task2) * parseInt(num1Task2); 
+            document.getElementById('demo2').innerHTML = result ; 
+        }
+        btn.addEventListener('click', task2area);
+
+        // // task3 Даны стороны прямоугольника a и b. Найти его площадь S = a·b и периметр P = 2·(a + b). 
+        var btn = document.getElementById('btn3');
+        var btnp= document.getElementById('btn3p');
+
+        var task3area = function() {
+            var numTask3a = document.getElementById('task3').value;
+            var numTask3b = document.getElementById('task3b').value;  
+            var area3 = parseInt(numTask3a) * parseInt(numTask3b); 
+            document.getElementById('demo3').innerHTML = area3 ; 
+        }
+        var task3pirimetr = function() {
+            var numTask3a = document.getElementById('task3').value;
+            var numTask3b = document.getElementById('task3b').value;  
+            var pirimetr3 = 2 * (parseInt(numTask3a) + parseInt(numTask3b));
+            document.getElementById('demo3').innerHTML = pirimetr3 ; 
+        }
+        btn.addEventListener('click', task3area);
+        btnp.addEventListener('click', task3pirimetr);
+    // task4  
+    var btnt4 = document.getElementById('btn4');
+    var btnp= document.getElementById('btn4p');
+
+       var task4cub = function() {
+            var numTask4a = document.getElementById('task4').value;
+            var cub4 = parseInt(numTask4a) * parseInt(numTask4a) * parseInt(numTask4a);
+            document.getElementById('demo4').innerHTML = cub4 ; 
+        }
+
+        var task4area = function() {
+            var numTask4a = document.getElementById('task4').value;
+            var area4 = 6 * parseInt(numTask4a) * parseInt(numTask4a);
+            document.getElementById('demo4').innerHTML = area4 ; 
+        }
+        btnt4.addEventListener('click', task4cub);
+        btnp.addEventListener('click', task4area);
+
+    //     // task5
+       var btn = document.getElementById('btn5');
+         var task5area = function() {
+            var numTask5a = document.getElementById('task5').value; 
+            var result = parseInt(numTask5a) * 3.14; 
+            document.getElementById('demo5').innerHTML = result ; 
+         }
+         btn.addEventListener('click', task5area);
+
+        // task6 
+        var btn = document.getElementById('btn6');
+        var btnp = document.getElementById('btn6p');
+
+
+        var task6cub = function() {
+            var numTask6a = document.getElementById('task6').value;
+            var numTask6b = document.getElementById('task6b').value;
+            var numTask6c = document.getElementById('task6c').value;  
+            var cub6 = parseInt(numTask6a) * parseInt(numTask6b) * parseInt(numTask6c);
+            document.getElementById('demo6').innerHTML = cub6 ; 
+        }
+        var task6area = function() {
+            var numTask6a = document.getElementById('task6').value;
+            var numTask6b = document.getElementById('task6b').value;
+            var numTask6c = document.getElementById('task6c').value;  
+            var area6 = 2 * (parseInt(numTask6a) * parseInt(numTask6b) + parseInt(numTask6b) * parseInt(numTask6c) + parseInt(numTask6a) * parseInt(numTask6c));
+            document.getElementById('demo6').innerHTML = area6 ; 
+        }
+        btn.addEventListener('click', task6cub);
+        btnp.addEventListener('click', task6area);
+
+     
+
+       
+             
+            
+   
+    //     console.log(skvadrat(4));
+    //     // task3
+    //     function pirimetr(a,b){
+    //         return a * b;
+    //     }
+    //     console.log(pirimetr(5,6));
+
+    //     function sum(a,b){
+    //         return 2*(a + b);
+    //     }
+    //     console.log(sum(5,6));
+    //     // task4 Дана длина ребра куба a. Найти объем куба V = a
+// 3 и площадь его
+// поверхности S = 6·a
+// 2
+    //     const p = 3.14;
+    //     function diametr(r){
+    //         return  p * r;
+    //     }
+    //     console.log(diametr(5));
+
+    //     function diametr(r){
+    //         return  2 * p * r;
+    //     }
+    //     console.log(diametr(12));
+    //     // task5
+    //     function cube(a){
+    //         return a * a * a;
+    //     }
+    //     console.log(cube(3));
+
+    //     function area(a){
+    //         return 6 * a * a;
+    //     }
+    //     console.log(area(7));
+    //     // task6
+    //     function paralipiped(a,b,c){
+    //         return a * b * c;
+    //     } console.log(paralipiped(2,3,4));
+        
+    //     function Sarea(a,b,c){
+    //         return 2 * (a * b + b * c + a * c);
+    //     } console.log(Sarea(2,3,4));
+        
+
+        </script>
+
+        
+    </body>
+    </html>
